@@ -1,7 +1,7 @@
 <!DOCTYPE html><html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <link rel="stylesheet" type="text/css" href="heimStyle.css">
+        <link rel="stylesheet" type="text/css" href="spjallStyle.css">
     </head>
     <body>
         <div class="selectionBar">
@@ -11,13 +11,5 @@
             <div><a href="#">Pöntun</a></div>
             <div><a href="#">Umfjöllun</a></div>
         </div>
-        <div class="parallax-item1"><div class="intro-text">Nafn Hátíðar</div></div>
-        <div class="temp"></div>
-        <div class="parallax-item2"></div>
-        <div class="temp"></div>
-        <div class="parallax-item3"></div>
-        <div class="temp"></div>
-        <div class="parallax-item4"></div>
-        <div class="temp"></div>
     </body>
 </html>

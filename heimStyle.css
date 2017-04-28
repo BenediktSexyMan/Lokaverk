@@ -1,20 +1,26 @@
 body {
-  margin: 0; }
+  margin: 0;
+  color: white;
+  font-family: helvetica;
+  font-size: 1.5em; }
   body .selectionBar {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    height: 3.5em; }
+    height: 2.5em;
+    position: absolute;
+    width: 100%;
+    opacity: 0.5; }
     body .selectionBar div {
       -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
       flex-grow: 1;
       text-align: center;
-      background-color: #d18a36;
-      border-right: 0.3em #ffb346 solid;
+      background-color: #402b3c;
+      border-right: 0.3em #53384e solid;
       transition: all 0.3s ease; }
       body .selectionBar div a {
-        color: #ffb346;
+        color: white;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
@@ -25,21 +31,36 @@ body {
         -ms-flex-pack: center;
         justify-content: center;
         text-decoration: none;
-        height: 2.35em;
+        height: 1.35em;
         font-size: 1.5em; }
     body .selectionBar div:last-child {
       border: none; }
     body .selectionBar div:hover {
-      background-color: #ffb346; }
+      background-color: #53384e; }
     body .selectionBar div:hover a {
-      color: #d18a36; }
-  body .parallax-item1 {
-    background-image: url("fest1.jpg");
-    height: 30em;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+      color: #402b3c; }
+
+@font-face {
+  font-family: helvetica;
+  src: url(helveticaneue.ttf); }
+
+body .parallax-item1 {
+  background-image: url("fest1.jpg");
+  height: 30em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  body .parallax-item1 .intro-text {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -48,43 +69,37 @@ body {
     flex-flow: column;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center; }
-    body .parallax-item1 .intro-text {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-      flex-flow: column;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      text-align: center;
-      width: 25em;
-      height: 6em;
-      margin-left: calc((100% - 25em) / 2);
-      background-color: azure; }
-  body .parallax-item2 {
-    background-image: url("fest2.jpg");
-    height: 30em;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  body .parallax-item3 {
-    background-image: url("fest4.jpg");
-    height: 30em;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  body .parallax-item4 {
-    background-image: url("fest3.jpg");
-    height: 30em;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  body .temp {
-    height: 30em;
-    background-color: azure; }
+    justify-content: center;
+    text-align: center;
+    width: 25em;
+    height: 6em;
+    margin-left: calc((100% - 25em) / 2);
+    background-color: #402b3c; }
+
+body .parallax-item2 {
+  background-image: url("fest2.jpg");
+  height: 30em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+body .parallax-item3 {
+  background-image: url("fest4.jpg");
+  height: 30em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+body .parallax-item4 {
+  background-image: url("fest3.jpg");
+  height: 30em;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+body .temp {
+  height: 30em;
+  background-color: #402b3c; }

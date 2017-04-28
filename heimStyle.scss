@@ -1,5 +1,11 @@
 @import "allStyle";
 
+@font-face
+{
+    font-family: helvetica;
+    src: url(helveticaneue.ttf);
+}
+
 @mixin parallax($bgImg, $bgHeight){
     background-image: url($bgImg);
     height: $bgHeight; 
@@ -10,36 +16,6 @@
 }
 
 body{
-    margin: 0;
-    .selectionBar{
-        display: flex;
-        height: $selection_height;
-        div{
-            flex-grow: 1;
-            text-align: center;
-            background-color: $contrast_two;
-            border-right: 0.3em $contrast_two * 1.3 solid;
-            transition: all 0.3s ease;
-            a{
-                color: $contrast_two * 1.3;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                text-decoration: none;
-                height: $selection_height - 1.15em;
-                font-size: $standard_font_size;
-            }
-        }
-        div:last-child{
-            border: none;
-        }
-        div:hover{
-            background-color: $contrast_two * 1.3;
-        }
-        div:hover a{
-            color: $contrast_two;
-        }
-    }
     .parallax-item1{
         @include parallax("fest1.jpg", 30em);
         display: flex;
