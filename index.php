@@ -20,9 +20,6 @@ All kinds of happy little splashes. La- da- da- da- dah. Just be happy. There's 
 All you have to learn here is how to have fun. Nature is so fantastic, enjoy it. Let it make you happy. I'm gonna start with a little Alizarin crimson and a touch of Prussian blue This is the way you take out your flustrations. We might as well make some Almighty mountains today as well, what the heck. This is a happy place, little squirrels live here and play.</div>
         <div class="parallax-item2"></div>
         <div class="temp">
-        <?php
-            echo "Supp bitches";
-        ?>
         </div>
         <div class="parallax-item3"></div>
         <div class="temp"></div>

@@ -1,9 +1,10 @@
 body {
   margin: 0;
-  color: white;
+  color: black;
   font-family: helvetica;
   font-size: 1.5em; }
   body .selectionBar {
+    top: 0;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -39,3 +40,49 @@ body {
       background-color: #53384e; }
     body .selectionBar div:hover a {
       color: #402b3c; }
+
+body {
+  background-color: #402b3c; }
+  body .posts {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    width: 100%; }
+    body .posts .post {
+      margin-bottom: 0.5em;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      width: 100%; }
+      body .posts .post .post-content {
+        padding: 1em;
+        background-color: #53384e; }
+        body .posts .post .post-content .post-title {
+          font-size: 1.2em;
+          background-color: #402b3c; }
+        body .posts .post .post-content .post-efni {
+          background-color: #402b3c; }
+        body .posts .post .post-content .post-nafn {
+          background-color: #402b3c;
+          font-size: 0.8em; }
+      body .posts .post .comment {
+        padding: 1em;
+        background-color: #53384e;
+        margin-top: 0.5em;
+        width: 65%; }
+        body .posts .post .comment .com-efni {
+          background-color: #402b3c; }
+        body .posts .post .comment .com-nafn {
+          background-color: #402b3c; }
+
+body::-webkit-scrollbar {
+  width: 1em; }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2d1e2a; }
