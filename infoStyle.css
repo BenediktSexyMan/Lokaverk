@@ -40,3 +40,29 @@ body {
       background-color: #53384e; }
     body .selectionBar div:hover a {
       color: #402b3c; }
+
+body {
+  background-color: #eaeaea; }
+
+.box1, .box2, .box3, .box4 {
+  border: 1px solid pink;
+  width: 80%;
+  height: 400px;
+  margin-left: calc((100% - 80%)/2);
+  margin-top: 100px; }
+
+.p-left {
+  color: #53535c;
+  width: 400px;
+  font-size: 1rem; }
+
+.p-right {
+  color: #53535c;
+  width: 400px;
+  font-size: 1rem; }
+
+img.side-img {
+  width: 300px;
+  float: right;
+  margin-top: -100px;
+  padding: 20px; }
