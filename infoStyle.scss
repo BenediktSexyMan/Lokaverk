@@ -1,34 +1,61 @@
 @import "allStyle";
 body{
-    background-color:#eaeaea;
+    background-color:#f7f7f7;
 }
 
-
-
-.box1 , .box2 , .box3 , .box4 {
-    border: 1px solid pink;
+.box1{
     width: 80%;
-    height: 400px;
+    height: 500px;
     margin-left: calc((100% - 80%)/2);
-    margin-top:100px;
+    border: 1px solid #f7f7f7;
+    margin-top: 100px;
 }
 
+.box2{
+    width: 80%;
+    height: 500px;
+    margin-left: calc((100% - 80%)/2);
+    border: 1px solid #f7f7f7;
+    margin-top: 100px;
+}
+
+
+
+
+
+
+.right-img {
+    width: 500px;
+    float: right;
+    padding: 20px;
+    margin-top: -250px;
+}
 
 .p-left {
     color: #53535c;
     width: 400px;
     font-size:1rem;
+    margin-top: 180px;
+    margin-left: 30px;
 }
+
+
+
+
 
 .p-right {
-    color:#53535c;
-    width:400px;
-    font-size: 1rem;
+    color: #53535c;
+    width: 400px;
+    font-size:1rem;
+    margin-top: 180px;
+    margin-right: 30px;
+    float: right;
 }
 
-img.side-img {
-    width: 300px;
+.left-img {
+    width: 500px;
     float: right;
-    margin-top: -100px;
     padding: 20px;
+    float: left;
+    margin-top: 50px;
 }
