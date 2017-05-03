@@ -39,4 +39,12 @@ body{
             color: $contrast_one;
         }
     }
+    .botn{
+        .footer-mainInfo{
+            width: 60%;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+        }
+    }
 }

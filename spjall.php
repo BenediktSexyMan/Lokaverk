@@ -11,5 +11,13 @@
             <div><a href="#">Pöntun</a></div>
             <div><a href="#">Umfjöllun</a></div>
         </div>
+        <div class="spjallContainer">
+            <div class="postList">
+                <iframe src="http://tsuts.tskoli.is/2t/1311992289/vsh2/Lokaverk/posts.php"></iframe>
+            </div>
+            <div class="innslattur">
+                
+            </div>
+        </div>
     </body>
 </html>

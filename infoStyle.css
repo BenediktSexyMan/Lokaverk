@@ -40,6 +40,17 @@ body {
       background-color: #53384e; }
     body .selectionBar div:hover a {
       color: #402b3c; }
+  body .botn .footer-mainInfo {
+    width: 60%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
 
 body {
   background-color: #eaeaea; }

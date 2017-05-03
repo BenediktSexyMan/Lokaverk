@@ -1,1 +1,26 @@
 @import "allStyle";
+body{
+    background-color: $contrast_one;
+    .spjallContainer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: $selection_height + 2em;
+        .postList{
+            width: 60%;
+            height: 20em;
+            border: 0.5em $contrast_one * 0.7 solid;
+            padding: 0;
+            iframe{
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+        .innslattur{
+            width: 30%;
+            background-color: pink;
+        }
+    }
+}
