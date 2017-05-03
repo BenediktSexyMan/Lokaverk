@@ -75,4 +75,4 @@ body {
         border: none; }
     body .spjallContainer .innslattur {
       width: 30%;
-      background-color: pink; }
+      border: 0.5em #2d1e2a solid; }

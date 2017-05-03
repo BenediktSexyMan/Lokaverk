@@ -12,7 +12,7 @@ CREATE TABLE post
 CREATE TABLE com
 (
 	orPost INT NOT NULL,
-    Efni VARCHAR(1000) NOT NULL,
+    efni VARCHAR(1000) NOT NULL,
     nafn VARCHAR(50),
     FOREIGN KEY (orPost) REFERENCES post(ID)
 );
@@ -34,3 +34,6 @@ FROM post
 	JOIN com
 		ON post.ID = com.orPost
 ORDER BY post.ID;
+
+DROP TABLE com;
+DROP TABLE post;

@@ -1,4 +1,30 @@
 <!DOCTYPE html><html>
+    <?php 
+        $servername = "localhost";
+        $username = "1311992289";
+        $password = "mypassword";
+        $dbname = "1311992289_hatidSpjall";
+        
+        // Create connection
+        $conn = mysqli_connect($servername, $username, $password, $dbname);
+        // Check connection
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        if (!empty($_POST)){
+            $sql = "SELECT titill, efni, nafn FROM post WHERE titill = \"" . $_POST["titill"] . "\" AND efni = \"" . $_POST["efni"] . "\" AND nafn = \"" . $_POST["nafn"] . "\";" ;
+            $result = mysqli_query($conn, $sql);
+            if(!$result){
+                die("Query failed: " . mysqli_error($conn));
+            }
+            if(mysqli_num_rows($result) == 0){
+                $sql = "INSERT INTO post(titill, efni, nafn) VALUES(\"" . $_POST["titill"] . "\",\"" . $_POST["efni"] . "\",\"" . $_POST["nafn"] . "\");";
+                if (!mysqli_query($conn, $sql)) {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                }
+            }
+        }
+    ?>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="spjallStyle.css">
@@ -16,7 +42,12 @@
                 <iframe src="http://tsuts.tskoli.is/2t/1311992289/vsh2/Lokaverk/posts.php"></iframe>
             </div>
             <div class="innslattur">
-                
+                <form action="spjall.php" method="post">
+                    Titill: <input type="text" name="titill" required><br>
+                    Efni: <input type="text" name="efni" required><br>
+                    Nafn: <input type="text" name="nafn"><br>
+                    <input type="submit">
+                </form>
             </div>
         </div>
     </body>

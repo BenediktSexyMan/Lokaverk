@@ -20,7 +20,7 @@ body{
         }
         .innslattur{
             width: 30%;
-            background-color: pink;
+            border: 0.5em $contrast_one * 0.7 solid;
         }
     }
 }
