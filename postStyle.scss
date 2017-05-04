@@ -25,6 +25,12 @@ body{
                     background-color: $contrast_one;
                     font-size: 0.8em;
                 }
+                form{
+                    textarea{
+                        width: 60%;
+                        height: 7em;
+                    }
+                }
             }
             .comment{
                 padding: 1em;

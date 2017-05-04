@@ -52,6 +52,19 @@ body {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
 
+@media screen and (max-width: 70em) {
+  .selectionBar {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    top: auto !important;
+    bottom: -2.5em !important; }
+    .selectionBar div {
+      border-bottom: none !important;
+      border-top: 0.3em #53384e solid !important;
+      border-right: 0.3em #53384e solid !important;
+      border-left: 0.3em #53384e solid !important; } }
+
 @font-face {
   font-family: helvetica;
   src: url(helveticaneue.ttf); }

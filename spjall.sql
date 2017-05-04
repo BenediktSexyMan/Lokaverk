@@ -11,6 +11,7 @@ CREATE TABLE post
 
 CREATE TABLE com
 (
+	ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	orPost INT NOT NULL,
     efni VARCHAR(1000) NOT NULL,
     nafn VARCHAR(50),
@@ -29,11 +30,18 @@ VALUES
 	(1, "Lol nice", "420blaze"),
 	(2, "Lol nice", "420blaze");
 
+
 SELECT post.titill, com.efni
 FROM post
 	JOIN com
 		ON post.ID = com.orPost
 ORDER BY post.ID;
+
+SELECT post.*, com.*
+FROM post
+	JOIN com
+		ON post.ID = com.orPost
+ORDER BY post.ID, com.ID;
 
 DROP TABLE com;
 DROP TABLE post;

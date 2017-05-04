@@ -39,14 +39,15 @@
         </div>
         <div class="spjallContainer">
             <div class="postList">
-                <iframe src="http://tsuts.tskoli.is/2t/1311992289/vsh2/Lokaverk/posts.php"></iframe>
+                <iframe src="posts.php"></iframe>
             </div>
             <div class="innslattur">
-                <form action="spjall.php" method="post">
-                    Titill: <input type="text" name="titill" required><br>
-                    Efni: <input type="text" name="efni" required><br>
-                    Nafn: <input type="text" name="nafn"><br>
-                    <input type="submit">
+                <form action="spjall.php" method="post" id="postPost">
+                    <p style="margin:0 0 0 0.5em;">Titill</p><input style="margin:0 0 0 0.5em;" autocomplete="off" type="text" name="titill" required><br>
+                    <!--Efni: <input autocomplete="off" type="text" name="efni" required><br>-->
+                    <p style="margin:0 0 0 0.5em;">Efni</p><textarea style="margin:0 0 0 0.5em;" name="efni" required form="postPost"></textarea><br>
+                    <p style="margin:0 0 0 0.5em;">Nafn</p><input style="margin:0 0 0 0.5em;" autocomplete="off" type="text" name="nafn"><br>
+                    <input  style="margin:0 0 1em 0.5em;" type="submit">
                 </form>
             </div>
         </div>

@@ -52,6 +52,19 @@ body {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
 
+@media screen and (max-width: 70em) {
+  .selectionBar {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    top: auto !important;
+    bottom: -2.5em !important; }
+    .selectionBar div {
+      border-bottom: none !important;
+      border-top: 0.3em #53384e solid !important;
+      border-right: 0.3em #53384e solid !important;
+      border-left: 0.3em #53384e solid !important; } }
+
 body {
   background-color: #402b3c; }
   body .spjallContainer {
@@ -66,7 +79,7 @@ body {
     margin-top: 4.5em; }
     body .spjallContainer .postList {
       width: 60%;
-      height: 20em;
+      height: 32em;
       border: 0.5em #2d1e2a solid;
       padding: 0; }
       body .spjallContainer .postList iframe {
@@ -75,4 +88,28 @@ body {
         border: none; }
     body .spjallContainer .innslattur {
       width: 30%;
+      height: 100%;
       border: 0.5em #2d1e2a solid; }
+      body .spjallContainer .innslattur form textarea {
+        width: 90%;
+        height: 10em; }
+      body .spjallContainer .innslattur form input {
+        width: 90%; }
+      body .spjallContainer .innslattur form input:last-child {
+        width: auto; }
+
+@media screen and (max-width: 70em) {
+  .spjallContainer {
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important; }
+    .spjallContainer .postList {
+      height: auto;
+      width: 90% !important;
+      margin-left: calc(5% - 1em); }
+    .spjallContainer .innslattur {
+      width: 90% !important;
+      margin: 1em 0 0 calc(5% - 1em); } }

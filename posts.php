@@ -33,15 +33,15 @@
                     }
                 }
                 
-                $sql = "SELECT ID, titill, efni, nafn FROM post";
+                $sql = "SELECT ID, titill, efni, nafn FROM post ORDER BY ID DESC";
                 $result = mysqli_query($conn, $sql);
                 
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<div class=\"post\"> <div class=\"post-content\">  <div class=\"post-title\">  <p style=\"word-wrap: break-word;\">" . $row["titill"] . " </p> </div> <div class=\"post-efni\"> <p style=\"word-wrap: break-word;\">" . $row["efni"] . "</p> </div> <div class=\"post-nafn\"> <p style=\"word-wrap: break-word;\">" . $row["nafn"] . " </p> </div> <form action=\"posts.php\" method=\"post\"> <p style=\"font-size:0.7em;margin:0.6em 0 -0.4em 0;\"> Skrifaðu ummæli</p> <input type=\"text\" name=\"efni\" required> <br> <p style=\"font-size:0.5em;margin:0.6em 0 -0.4em 0;\">Nafn</p> <input type=\"text\" name=\"nafn\"> <br> <input type=\"number\" name=\"postID\" value=" . $row["ID"] . " style=\"display: none;\"> <input type=\"submit\"> </form> </div>";
+                        echo "<div class=\"post\"> <div class=\"post-content\">  <div class=\"post-title\">  <p style=\"word-wrap: break-word;\">" . $row["titill"] . " </p> </div> <div class=\"post-efni\"> <p style=\"word-wrap: break-word;\">" . $row["efni"] . "</p> </div> <div class=\"post-nafn\"> <p style=\"word-wrap: break-word;\">" . $row["nafn"] . " </p> </div> <form id=\"postCom" . $row["ID"] . "\" action=\"posts.php\" method=\"post\"> <p style=\"font-size:0.7em;margin:0.6em 0 0 0;\"> Skrifaðu ummæli</p> <textarea name=\"efni\" required form=\"postCom" . $row["ID"] . "\"></textarea> <br> <p style=\"font-size:0.5em;margin:0.6em 0 0 0;\">Nafn</p> <input autocomplete=\"off\" type=\"text\" name=\"nafn\" style=\"width: 25%;\"> <br> <input autocomplete=\"off\" type=\"number\" name=\"postID\" value=" . $row["ID"] . " style=\"display: none;\"> <input autocomplete=\"off\" type=\"submit\"> </form> </div>";
                         
-                        $sql2 = "SELECT post.ID, com.efni, com.nafn FROM post JOIN com ON post.ID = com.orPost ORDER BY post.ID;";
+                        $sql2 = "SELECT post.ID, com.efni, com.nafn FROM post JOIN com ON post.ID = com.orPost ORDER BY com.ID;";
                         $result2 = mysqli_query($conn, $sql2);
                         
                         if (mysqli_num_rows($result2) > 0) {
