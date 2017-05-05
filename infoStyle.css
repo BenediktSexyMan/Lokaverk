@@ -46,8 +46,15 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); }
 
 .right-p {
-  margin: 30px;
-  color: white; }
+  /* margin: 30px; */
+  color: white;
+  margin-left: -60px;
+  width: 255px; }
+
+.box2-h3 {
+  /* color: white; */
+  color: #efefef;
+  font-size: 42px; }
 
 p {
   font-size: 15px; }
