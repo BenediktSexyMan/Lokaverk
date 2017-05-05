@@ -31,6 +31,7 @@
                             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                         }
                     }
+                    $_POST = array();
                 }
                 
                 $sql = "SELECT ID, titill, efni, nafn FROM post ORDER BY ID DESC";

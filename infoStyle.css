@@ -2,14 +2,28 @@ body {
   margin: 0;
   color: black;
   font-family: helvetica;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  position: relative; }
+  body #toggle {
+    display: none; }
+  body #menu {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    background-color: #402b3c;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+    height: 3em;
+    border-top: 0.3em #53384e solid; }
+  body #menu:hover {
+    cursor: pointer; }
   body .selectionBar {
     top: 0;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     height: 2.5em;
-    position: absolute;
     width: 100%;
     opacity: 0.5; }
     body .selectionBar div {
@@ -53,17 +67,27 @@ body {
     justify-content: space-around; }
 
 @media screen and (max-width: 70em) {
+  #menu {
+    display: inline !important; }
   .selectionBar {
+    transition: all 0.3s ease;
+    position: fixed;
+    z-index: 4;
     -webkit-flex-flow: column;
     -ms-flex-flow: column;
     flex-flow: column;
     top: auto !important;
-    bottom: -2.5em !important; }
+    opacity: 1 !important;
+    bottom: -20em; }
     .selectionBar div {
       border-bottom: none !important;
       border-top: 0.3em #53384e solid !important;
       border-right: 0.3em #53384e solid !important;
-      border-left: 0.3em #53384e solid !important; } }
+      border-left: 0.3em #53384e solid !important; }
+  .botn {
+    margin-bottom: 3em; }
+  #toggle:checked + .selectionBar {
+    bottom: 12.2em !important; } }
 
 body {
   background-color: #eaeaea; }

@@ -18,6 +18,13 @@ CREATE TABLE com
     FOREIGN KEY (orPost) REFERENCES post(ID)
 );
 
+CREATE TABLE rod
+(
+	ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nafn VARCHAR(100) NOT NULL,
+    sent INT NOT NULL
+);
+
 INSERT INTO post(titill, efni, nafn)
 VALUES
 	("Where are my heluleis?!?!", "Can someone please help me! I've lost my heluleis!!!!!!!!<br>Lol", "Anon"),
@@ -30,6 +37,9 @@ VALUES
 	(1, "Lol nice", "420blaze"),
 	(2, "Lol nice", "420blaze");
 
+INSERT INTO rod(nafn, sent)
+VALUES
+	("Tonlistar_hatid", 0);
 
 SELECT post.titill, com.efni
 FROM post
