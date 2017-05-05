@@ -1,137 +1,102 @@
+//colors
+$pink: pink;
+$black_50: rgba(0, 0, 0, 0.5);
+$white: white;
+$seashell: #f1f1f1;
+$color_blackcurrant_approx: #402b3c;
+$black_20: rgba(0, 0, 0, .2);
+$gallery: #efefef;
+$color_celeste_approx: #cdcdcd;
+$color_sundown_approx: #ffb7b7;
+
+//fonts
+$font_0: helvetica;
+$font_1: sans-serif;
+$font_2: arial;
+
 .selectionBar {
-    position: absolute;
-    top:0;
-    width: 100%;
-    left:0;
-    display: flex;
-    height: 33px;
-    background:rgba(0, 0, 0, 0.5);
-    position: fixed;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	display: flex;
+	height: 33px;
+	background: $black_50;
+	position: fixed;
 }
-
 a {
-    padding:10px;
-    margin-top: 20px;
-    text-decoration: none;
-    color:white;
+	padding: 10px;
+	margin-top: 20px;
+	text-decoration: none;
+	color: $white;
 }
-
-
-
-
-body{
-    background-color:#f1f1f1;
-    max-width: 60em;
-    margin: 0 auto;
-    margin-top: 80px;
-    font-family:helvetica, sans-serif, arial;
+body {
+	background-color: $seashell;
+	max-width: 60em;
+	margin: 0 auto;
+	margin-top: 80px;
+	font-family: $font_0, $font_1, $font_2;
 }
-
-.box1{
-    width: 90%;
-    margin: auto;
-    display:flex;
-    height: 350px;
-    margin-top: 100px;
-    background: #402b3c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+.box1 {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	height: 350px;
+	margin-top: 100px;
+	background: $color_blackcurrant_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px $black_20;
 }
-
-.box2{
-    width: 90%;
-    margin: auto;
-    display:flex;
-    height: 350px;
-    margin-top: 100px;
-    background: #402b3c;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+.box2 {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	height: 350px;
+	margin-top: 100px;
+	background: $color_blackcurrant_approx;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 2px 5px $black_20;
 }
-
 .right-p {
-    /* margin: 30px; */
-    color: white;
-    margin-left: -60px;
-    width: 255px;
+	color: $white;
+	margin-left: -60px;
+	width: 255px;
 }
-
-
 .box2-h3 {
-    /* color: white; */
-    color: #efefef;
-    font-size: 42px;
+	color: $gallery;
+	font-size: 42px;
 }
-
 p {
-    font-size: 15px;
+	font-size: 15px;
 }
-
-/*-----box1-----*/
 .p-div-left {
-    width: 100%;
-    min-width:250px;
-    height: 100%;
-    padding-left: 20px;
-    color: #cdcdcd;
-    h3 {
-        font-size: 42px;
-        text-align: center;
-        color: #efefef;
-        
-    }
+	width: 100%;
+	min-width: 250px;
+	height: 100%;
+	padding-left: 20px;
+	color: $color_celeste_approx;
+	h3: ;
 }
-
 .right-img {
-    height: 100%;
-    min-width: 35%;
-    margin-left: 80px;
+	height: 100%;
+	min-width: 35%;
+	margin-left: 80px;
 }
-/*-----box1-----*/
-
-
-
-
 .p-div-right {
-    width: 100px;
-    min-width: 250px;
-    height: 100%;
-    padding-left: 20px;
-    /* margin-left: 60px; */
-    /* margin-right: 90px; */
-    /* background-color: pink; */
+	width: 100px;
+	min-width: 250px;
+	height: 100%;
+	padding-left: 20px;
 }
-
-
-
-
-
-
 .left-img {
-    /* width: 90%; */
-    /* margin-left: calc((100% - 90%)/2); */
-    min-width: 35%;
-    /* margin-top: 20px; */
-    height: 100%;
+	min-width: 35%;
+	height: 100%;
 }
-
-
-
-
-
 ::selection {
-  background: #ffb7b7;
+	background: $color_sundown_approx;
 }
-
-
-
-
-@media screen and (max-width: 55em) {
-    body {
-        background-color:pink;
-    }
+@media screen and(max-width: 55em) {
+	body {
+		background-color: $pink;
+	}
 }
-
-
-
-
-
-/* margin fyrir nav uppi er: $selection-height*/
