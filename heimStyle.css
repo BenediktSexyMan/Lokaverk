@@ -54,17 +54,44 @@ body {
       background-color: #53384e; }
     body .selectionBar div:hover a {
       color: #402b3c; }
-  body .botn .footer-mainInfo {
-    width: 60%;
+  body .botn {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-flow: row;
     -ms-flex-flow: row;
     flex-flow: row;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around; }
+    background-color: #402b3c;
+    border-top: 0.3em #53384e solid; }
+    body .botn .footer-mainInfo {
+      font-size: 1.5vw;
+      width: 70%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+      flex-flow: row;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+    body .botn .sponsors {
+      width: 30%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row;
+      -ms-flex-flow: row;
+      flex-flow: row;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around; }
+      body .botn .sponsors img {
+        -webkit-flex-basis: 1;
+        -ms-flex-preferred-size: 1;
+        flex-basis: 1;
+        width: 15%;
+        height: 100%; }
 
 @media screen and (max-width: 70em) {
   #menu {

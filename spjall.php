@@ -49,7 +49,7 @@
                     <p style="margin:0 0 0 0.5em;">Titill</p><input style="margin:0 0 0 0.5em;" autocomplete="off" type="text" name="titill" required><br>
                     <!--Efni: <input autocomplete="off" type="text" name="efni" required><br>-->
                     <p style="margin:0 0 0 0.5em;">Efni</p><textarea style="margin:0 0 0 0.5em;" name="efni" required form="postPost"></textarea><br>
-                    <p style="margin:0 0 0 0.5em;">Nafn</p><input style="margin:0 0 0 0.5em;" autocomplete="off" type="text" name="nafn"><br>
+                    <p style="margin:0 0 0 0.5em;">Nafn (Aukaval)</p><input style="margin:0 0 0 0.5em;" autocomplete="off" type="text" name="nafn"><br>
                     <input  style="margin:0 0 1em 0.5em;" type="submit">
                 </form>
             </div>
