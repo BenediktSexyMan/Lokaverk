@@ -1,1 +1,38 @@
-@import "allStyle";
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 30%;
+    margin-left: 3%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.rammi-allt {
+    display: flex;
+}
+
+
+
+td {
+    color: white;
+    margin-bottom: 30px;
+}
+
+body{
+    background-color: #f1f1f1;
+}
+
+.sun{
+    display: flex;
+    flex-flow: column;
+    width: 33.333%;
+}
+
+.sun *{
+    margin-bottom: 1em;
+    width: 100%;
+}
