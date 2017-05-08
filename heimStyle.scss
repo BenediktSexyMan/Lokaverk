@@ -17,6 +17,7 @@
 
 body{
     .parallax-item1{
+        margin-top: -$selection_height;
         @include parallax("fest1.jpg", 30em);
         display: flex;
         flex-flow: column;
@@ -26,9 +27,9 @@ body{
             flex-flow: column;
             justify-content: center;
             text-align: center;
-            width: 25em;
-            height: 6em;
-            margin-left: calc((100% - 25em) / 2);
+            width: 25%;
+            height: 5em;
+            margin-left: calc(75% / 2);
             background-color: $contrast_one;
         }
     }

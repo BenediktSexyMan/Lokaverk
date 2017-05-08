@@ -11,10 +11,18 @@ CREATE TABLE post
 
 CREATE TABLE com
 (
+	ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
 	orPost INT NOT NULL,
-    Efni VARCHAR(1000) NOT NULL,
+    efni VARCHAR(1000) NOT NULL,
     nafn VARCHAR(50),
     FOREIGN KEY (orPost) REFERENCES post(ID)
+);
+
+CREATE TABLE rod
+(
+	ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nafn VARCHAR(100) NOT NULL,
+    sent INT NOT NULL
 );
 
 INSERT INTO post(titill, efni, nafn)
@@ -29,8 +37,21 @@ VALUES
 	(1, "Lol nice", "420blaze"),
 	(2, "Lol nice", "420blaze");
 
+INSERT INTO rod(nafn, sent)
+VALUES
+	("Tonlistar_hatid", 0);
+
 SELECT post.titill, com.efni
 FROM post
 	JOIN com
 		ON post.ID = com.orPost
 ORDER BY post.ID;
+
+SELECT post.*, com.*
+FROM post
+	JOIN com
+		ON post.ID = com.orPost
+ORDER BY post.ID, com.ID;
+
+DROP TABLE com;
+DROP TABLE post;

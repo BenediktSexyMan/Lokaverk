@@ -1,0 +1,136 @@
+@import "allStyle";
+body{
+    background-color: $contrast_one;
+    .pontunCon{
+        width: 60%;
+        height: 30em;
+        background-color: $contrast_one;
+        border: 0.3em $contrast_one * 1.3 solid;
+        margin: 1em 0 1em calc(40% / 2);
+        form{
+            text-align: center;
+            .nafnInslattur{
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+                padding: 1em;
+                div{
+                    margin: 0 1em;
+                    display: flex;
+                    flex-flow: row;
+                    p{
+                        margin: 0 0.5em;
+                    }
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+            .mailInfo{
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+                padding: 1em;
+                div{
+                    margin: 0 1em;
+                    display: flex;
+                    flex-flow: row;
+                    p{
+                        margin: 0 0.5em;
+                    }
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+            .dagInnslattur{
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+                padding: 1em;
+                div{
+                    margin: 0 1em;
+                    display: flex;
+                    flex-flow: row;
+                    p{
+                        margin: 0 0.5em;
+                    }
+                } 
+            }
+            .skil{
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 70em){
+    .nafnInslattur{
+        flex-flow: column !important;
+        padding-bottom: 0 !important;
+        div{
+            flex-flow: column !important;
+            text-align: center;
+            margin-bottom: 0.3em !important;
+            input{
+                width: 50% !important;
+                margin-left: 25%;
+            }
+        }
+    }
+    .mailInfo{
+        flex-flow: column !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        div{
+            flex-flow: column !important;
+            text-align: center;
+            margin-bottom: 0.2em !important;
+            input{
+                width: 50% !important;
+                margin-left: 25%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 50em){
+    .dagInnslattur{
+        flex-flow: column !important;
+        div{
+            flex-flow: column !important;
+            text-align: center;
+            margin-bottom: 0.5em !important; 
+            input{
+                margin: auto;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

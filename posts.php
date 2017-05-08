@@ -6,27 +6,6 @@
     </head>
     <body>
         <div class="posts">
-            <div class="post">
-                <div class="post-content">
-                    <div class="post-title">
-                        <p>Cookies</p>
-                    </div>
-                    <div class="post-efni">
-                        <p>Can some super duper advanced scintist tell me what in the world cookies are?!?! It's all over my Google Chrome!!! Do these cookies not jam the computers hardware?!?!?!?!?! Please answer Meeeee</p>
-                    </div>
-                    <div class="post-nafn">
-                        <p>Alan Rickman</p>
-                    </div>
-                </div>
-                <div class="comment">
-                    <div class="com-efni">
-                        <p>They track yo shit</p>
-                    </div>
-                    <div class="com-nafn">
-                        <p>Captain Obvious</p>
-                    </div>
-                </div>
-            </div>
             <?php
                 $servername = "localhost";
                 $username = "1311992289";
@@ -40,15 +19,30 @@
                     die("Connection failed: " . mysqli_connect_error());
                 }
                 
-                $sql = "SELECT ID, titill, efni, nafn FROM post";
+                if (!empty($_POST)){
+                    $sql = "SELECT orPost, efni, nafn FROM com WHERE orPost = \"" . $_POST["postID"] . "\" AND efni = \"" . $_POST["efni"] . "\" AND nafn = \"" . $_POST["nafn"] . "\";" ;
+                    $result = mysqli_query($conn, $sql);
+                    if(!$result){
+                        die("Query failed: " . mysqli_error($conn));
+                    }
+                    if(mysqli_num_rows($result) == 0){
+                        $sql = "INSERT INTO com(orPost, efni, nafn) VALUES(" . $_POST["postID"] . ",\"" . $_POST["efni"] . "\",\"" . $_POST["nafn"] . "\");";
+                        if (!mysqli_query($conn, $sql)) {
+                            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                        }
+                    }
+                    $_POST = array();
+                }
+                
+                $sql = "SELECT ID, titill, efni, nafn FROM post ORDER BY ID DESC";
                 $result = mysqli_query($conn, $sql);
                 
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<div class=\"post\"> <div class=\"post-content\">  <div class=\"post-title\">  <p>" . $row["titill"] . " </p> </div> <div class=\"post-efni\"> <p>" . $row["efni"] . "</p> </div> <div class=\"post-nafn\"> <p>" . $row["nafn"] . " </p> </div> </div>";
+                        echo "<div class=\"post\"> <div class=\"post-content\">  <div class=\"post-title\">  <p style=\"word-wrap: break-word;\">" . $row["titill"] . " </p> </div> <div class=\"post-efni\"> <p style=\"word-wrap: break-word;\">" . $row["efni"] . "</p> </div> <div class=\"post-nafn\"> <p style=\"word-wrap: break-word;\">" . $row["nafn"] . " </p> </div> <form id=\"postCom" . $row["ID"] . "\" action=\"posts.php\" method=\"post\"> <p style=\"font-size:0.7em;margin:0.6em 0 0 0;\"> Skrifaðu ummæli</p> <textarea name=\"efni\" required form=\"postCom" . $row["ID"] . "\"></textarea> <br> <p style=\"font-size:0.5em;margin:0.6em 0 0 0;\">Nafn (Aukaval)</p> <input autocomplete=\"off\" type=\"text\" name=\"nafn\" style=\"width: 25%;\"> <br> <input autocomplete=\"off\" type=\"number\" name=\"postID\" value=" . $row["ID"] . " style=\"display: none;\"> <input autocomplete=\"off\" type=\"submit\"> </form> </div>";
                         
-                        $sql2 = "SELECT post.ID, com.efni, com.nafn FROM post JOIN com ON post.ID = com.orPost ORDER BY post.ID;";
+                        $sql2 = "SELECT post.ID, com.efni, com.nafn FROM post JOIN com ON post.ID = com.orPost ORDER BY com.ID;";
                         $result2 = mysqli_query($conn, $sql2);
                         
                         if (mysqli_num_rows($result2) > 0) {
