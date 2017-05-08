@@ -16,6 +16,11 @@ text-align: center;}
     color: white;
 }
 
+
+.rammi-allt {
+    margin-left: calc((100% - 92.8%)/2);
+width: 92.8%;}
+
 .top-title {
   position: absolute;
   top: 200px;
