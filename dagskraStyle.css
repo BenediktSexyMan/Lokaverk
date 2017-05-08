@@ -12,7 +12,7 @@ td, th {
 text-align: center;}
 
 .selected {
-    background-color: red;
+    background-color: #dd261c;
     color: white;
 }
 
@@ -20,6 +20,13 @@ text-align: center;}
 .rammi-allt {
     margin-left: calc((100% - 92.8%)/2);
 width: 92.8%;}
+
+
+.logo-cal {
+    width: 150px;
+}
+
+
 
 .top-title {
   position: absolute;
