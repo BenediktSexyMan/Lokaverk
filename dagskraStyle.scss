@@ -1,4 +1,5 @@
 table {
+    margin-top: 100px;
     margin-left:calc((100% - 30%)/2)
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -8,12 +9,24 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+text-align: center;}
+
+.selected {
+    background-color: rgba(221, 38, 28, 0.79);
+    color: white;
 }
 
+
 .rammi-allt {
-    display: flex;
-    border: 1px solid green;
+    margin-left: calc((100% - 92.8%)/2);
+width: 92.8%;}
+
+
+.logo-cal {
+    width: 150px;
 }
+
+
 
 .top-title {
   position: absolute;
@@ -34,39 +47,27 @@ td, th {
   width: 100%;
   z-index: 9999;
   margin-top: -15%; }
+
 td {
-    margin: 12px 12px 12px 12px;
     color: black;
     background-color:#fafafa;
-    height: 100px;
+    height: 150px;
     table-layout: fixed;
 width: 150px;
 }
 
 body{
-    background-color:white;
 }
 
-.sun{
-    display: flex;
-    flex-flow: column;
-    width: 33.333%;
-}
 
-.sun *{
-    margin-bottom: 1em;
-    width: 100%;
-}
 
 
 
 div {
-    width: 100px;
-    margin:100px;
+    width: 150px;
 }
 
 
 .tafla {
-    border: 1px solid green;
-    width: 100px;
+
 }
