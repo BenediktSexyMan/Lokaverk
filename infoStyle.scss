@@ -30,6 +30,10 @@ a {
 	text-decoration: none;
 	color: $white;
 }
+a:hover{
+    color: #dd261c;
+	transition: color 200ms;
+}
 body {
 	background-color: $seashell;
 	max-width: 60em;
