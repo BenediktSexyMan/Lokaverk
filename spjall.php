@@ -25,6 +25,7 @@
             }
             $_POST = array();
         }
+        mysqli_close($conn);
     ?>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -34,10 +35,10 @@
         <label for="toggle" id="menu"><p>&#9776; menu</p></label>
         <input type="checkbox" id="toggle">
         <div class="selectionBar">
-            <div><a href="#">Heim</a></div>
-            <div><a href="#">Um</a></div>
-            <div><a href="#">Dagskrá</a></div>
-            <div><a href="#">Pöntun</a></div>
+            <div><a href="index.html">Heim</a></div>
+            <div><a href="info.html">Um</a></div>
+            <div><a href="dagskra.html">Dagskrá</a></div>
+            <div><a href="panta.php">Pöntun</a></div>
             <div><a href="#">Umfjöllun</a></div>
         </div>
         <div class="spjallContainer">
@@ -68,6 +69,11 @@
                     <p>Símanúmer:</p>
                     <p>5812345</p>
                 </div>
+            </div>
+            <div class="sponsors">
+                <img src="pizzeria.svg">
+                <img src="AKS.svg">
+                <img src="slug.svg">
             </div>
         </footer>
     </body>

@@ -34,16 +34,36 @@ body{
         }
     }
     .parallax-item2{
-        @include parallax("fest2.jpg", 30em);
+        @include parallax("fest2.jpg", 10em);
     }
     .parallax-item3{
-        @include parallax("fest4.jpg", 30em);
+        @include parallax("fest4.jpg", 10em);
     }
     .parallax-item4{
-        @include parallax("fest3.jpg", 30em);
+        @include parallax("fest3.jpg", 10em);
     }
-    .temp{
-        height: 30em;
+    .text{
         background-color: $contrast_one;
+        height: 12em;
+        .content{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            .pwrapper{
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                p{
+                    padding: 1em;
+                    margin: 0;
+                    font-size: 3vw;
+                }
+            }
+            img{
+                height: 100%;
+            }
+        }
     }
 }

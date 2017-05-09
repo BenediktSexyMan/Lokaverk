@@ -155,7 +155,7 @@ body .parallax-item1 {
 
 body .parallax-item2 {
   background-image: url("fest2.jpg");
-  height: 30em;
+  height: 10em;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -163,7 +163,7 @@ body .parallax-item2 {
 
 body .parallax-item3 {
   background-image: url("fest4.jpg");
-  height: 30em;
+  height: 10em;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -171,12 +171,40 @@ body .parallax-item3 {
 
 body .parallax-item4 {
   background-image: url("fest3.jpg");
-  height: 30em;
+  height: 10em;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
 
-body .temp {
-  height: 30em;
-  background-color: #402b3c; }
+body .text {
+  background-color: #402b3c;
+  height: 12em; }
+  body .text .content {
+    height: 100%;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row;
+    -ms-flex-flow: row;
+    flex-flow: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    body .text .content .pwrapper {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+      flex-flow: column;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      body .text .content .pwrapper p {
+        padding: 1em;
+        margin: 0;
+        font-size: 3vw; }
+    body .text .content img {
+      height: 100%; }

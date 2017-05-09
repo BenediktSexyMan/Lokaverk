@@ -38,7 +38,6 @@
                 $result = mysqli_query($conn, $sql);
                 
                 if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
                         echo "<div class=\"post\"> <div class=\"post-content\">  <div class=\"post-title\">  <p style=\"word-wrap: break-word;\">" . $row["titill"] . " </p> </div> <div class=\"post-efni\"> <p style=\"word-wrap: break-word;\">" . $row["efni"] . "</p> </div> <div class=\"post-nafn\"> <p style=\"word-wrap: break-word;\">" . $row["nafn"] . " </p> </div> <form id=\"postCom" . $row["ID"] . "\" action=\"posts.php\" method=\"post\"> <p style=\"font-size:0.7em;margin:0.6em 0 0 0;\"> Skrifaðu ummæli</p> <textarea name=\"efni\" required form=\"postCom" . $row["ID"] . "\"></textarea> <br> <p style=\"font-size:0.5em;margin:0.6em 0 0 0;\">Nafn (Aukaval)</p> <input autocomplete=\"off\" type=\"text\" name=\"nafn\" style=\"width: 25%;\"> <br> <input autocomplete=\"off\" type=\"number\" name=\"postID\" value=" . $row["ID"] . " style=\"display: none;\"> <input autocomplete=\"off\" type=\"submit\"> </form> </div>";
                         
