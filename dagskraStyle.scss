@@ -1,5 +1,5 @@
 table {
-    margin-left:calc((100% - 30%)/2)
+    margin-left:calc((100% - 30%)/2);
     font-family: arial, sans-serif;
     border-collapse: collapse;
 }
@@ -58,15 +58,15 @@ body{
     width: 100%;
 }
 
-
-
 div {
     width: 100px;
     margin:100px;
 }
 
-
 .tafla {
     border: 1px solid green;
     width: 100px;
+}
+td.lower-td {
+    width: 200px;
 }
