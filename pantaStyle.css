@@ -116,6 +116,12 @@ body {
   #toggle:checked + .selectionBar {
     bottom: 12.2em !important; } }
 
+::-moz-selection {
+  background: #ffb7b7; }
+
+::selection {
+  background: #ffb7b7; }
+
 .hider {
   position: fixed;
   width: 100%;

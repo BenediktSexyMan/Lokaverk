@@ -109,3 +109,7 @@ body{
         bottom: ($selection_height * 5) - 0.3em!important;
     }
 }
+
+::selection {
+	background: #ffb7b7;
+}
