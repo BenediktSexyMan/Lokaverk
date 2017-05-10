@@ -152,6 +152,9 @@ body .parallax-item1 {
     height: 5em;
     margin-left: calc(75% / 2);
     background-color: #402b3c; }
+    body .parallax-item1 .intro-text img {
+      width: 15vw;
+      margin-left: calc((100% - 15vw) / 2); }
 
 body .parallax-item2 {
   background-image: url("fest2.jpg");

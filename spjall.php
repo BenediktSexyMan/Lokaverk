@@ -30,6 +30,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <link rel="stylesheet" type="text/css" href="spjallStyle.css">
+        <title>Sumarnótt - Spjall</title>
     </head>
     <body>
         <label for="toggle" id="menu"><p>&#9776; menu</p></label>

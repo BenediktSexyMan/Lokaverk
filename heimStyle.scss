@@ -31,6 +31,10 @@ body{
             height: 5em;
             margin-left: calc(75% / 2);
             background-color: $contrast_one;
+            img{
+                width: 15vw;
+                margin-left: calc((100% - 15vw) / 2);
+            }
         }
     }
     .parallax-item2{
